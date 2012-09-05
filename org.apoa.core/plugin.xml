@@ -51,8 +51,8 @@
                id="org.apoa.core.toolbars.sampleToolbar">
             <command
                   commandId="org.apoa.core.commands.sampleCommand"
-                  icon="icons/sample.gif"
-                  tooltip="What is this plugin"
+                  icon="icons/wtficon.png"
+                  tooltip="What is this exception?"
                   id="org.apoa.core.toolbars.sampleCommand">
             </command>
          </toolbar>
