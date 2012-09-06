@@ -3,10 +3,10 @@
 <schema targetNamespace="org.apoa.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.apoa.core" id="org.apoa.queryTextExtractor" name="queryTextExtractor"/>
+         <meta.schema plugin="org.apoa.core" id="org.apoa.searchConfiguration" name="searchConfiguration"/>
       </appinfo>
       <documentation>
-         Takes the string data from the QueryTextExtractor, and uses a specific search engine to generate QueryResults for the ResultView to show.
+         Provides a configuration that enables to &quot;glue&quot; together all the search flow elements for APOA.
       </documentation>
    </annotation>
 
@@ -17,9 +17,6 @@
          </appinfo>
       </annotation>
       <complexType>
-         <choice minOccurs="1" maxOccurs="unbounded">
-            <element ref="extractor"/>
-         </choice>
          <attribute name="point" type="string" use="required">
             <annotation>
                <documentation>
@@ -47,22 +44,49 @@
       </complexType>
    </element>
 
-   <element name="extractor">
+   <element name="configuration">
       <complexType>
          <attribute name="name" type="string" use="required">
             <annotation>
                <documentation>
-                  The reference name for the extractor.
+                  
                </documentation>
             </annotation>
          </attribute>
-         <attribute name="class" type="string" use="required">
+         <attribute name="description" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="queryExtractor" type="string" use="required">
             <annotation>
                <documentation>
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.apoa.extensions.QueryTextExtractor"/>
+                  <meta.attribute kind="identifier" basedOn="org.apoa.queryTextExtractor/extractor/@class"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="queryProcessor" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="identifier" basedOn="org.apoa.extensions.queryProcessor/processor/@class"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="resultView" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="identifier" basedOn="org.apoa.extensions.queryProcessor/resultView/@class"/>
                </appinfo>
             </annotation>
          </attribute>

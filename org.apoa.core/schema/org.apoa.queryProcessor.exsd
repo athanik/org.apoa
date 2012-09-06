@@ -3,10 +3,10 @@
 <schema targetNamespace="org.apoa.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.apoa.core" id="org.apoa.queryTextExtractor" name="queryTextExtractor"/>
+         <meta.schema plugin="org.apoa.core" id="org.apoa.queryProcessor" name="queryProcessor"/>
       </appinfo>
       <documentation>
-         Takes the string data from the QueryTextExtractor, and uses a specific search engine to generate QueryResults for the ResultView to show.
+         Focuses on filtering console output and delivering a quality data string to be sent to a QueryProcessor.
       </documentation>
    </annotation>
 
@@ -18,7 +18,7 @@
       </annotation>
       <complexType>
          <choice minOccurs="1" maxOccurs="unbounded">
-            <element ref="extractor"/>
+            <element ref="processor"/>
          </choice>
          <attribute name="point" type="string" use="required">
             <annotation>
@@ -47,12 +47,12 @@
       </complexType>
    </element>
 
-   <element name="extractor">
+   <element name="processor">
       <complexType>
          <attribute name="name" type="string" use="required">
             <annotation>
                <documentation>
-                  The reference name for the extractor.
+                  The reference name for the processor.
                </documentation>
             </annotation>
          </attribute>
@@ -62,7 +62,7 @@
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.apoa.extensions.QueryTextExtractor"/>
+                  <meta.attribute kind="java" basedOn=":org.apoa.extensions.QueryProcessor"/>
                </appinfo>
             </annotation>
          </attribute>

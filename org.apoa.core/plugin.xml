@@ -2,6 +2,9 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension-point id="org.apoa.queryTextExtractor" name="queryTextExtractor" schema="schema/org.apoa.queryTextExtractor.exsd"/>
+   <extension-point id="org.apoa.searchConfiguration" name="searchConfiguration" schema="schema/org.apoa.searchConfiguration.exsd"/>
+   <extension-point id="org.apoa.resultView" name="resultView" schema="schema/org.apoa.resultView.exsd"/>
+   <extension-point id="org.apoa.queryProcessor" name="queryProcessor" schema="schema/org.apoa.queryProcessor.exsd"/>
 
    <extension
          point="org.eclipse.ui.commands">
