@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.apoa.queryTextExtractor">
+      <extractor
+            class="org.apoa.basic.BasicTextExtractor"
+            name="org.apoa.basic.basicExtractor">
+      </extractor>
+   </extension>
+
+   <extension
+         point="org.apoa.resultView">
+      <resultView
+            class="org.apoa.basic.RawResultView"
+            name="org.apoa.basic.rawResultView">
+      </resultView>
+   </extension>
+   <extension
+         point="org.apoa.queryProcessor">
+      <processor
+            class="org.apoa.basic.DuckDuckGoQueryProcessor"
+            name="org.apoa.basic.duckDuckGoProcessor">
+      </processor>
+   </extension>
+   
+    <extension
+         point="org.apoa.searchConfiguration">
+      <configuration
+            name="org.apoa.basic.basicConfig"
+            queryExtractor="org.apoa.basic.basicExtractor"
+            queryProcessor="org.apoa.basic.duckDuckGoProcessor"
+            resultView="org.apoa.basic.rawResultView">
+      </configuration>
+   </extension>
+
+</plugin>
