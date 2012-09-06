@@ -4,7 +4,7 @@ Bundle-Name: Awesome Plug-in of Awesomeness
 Bundle-SymbolicName: org.apoa.core; singleton:=true
 Bundle-Version: 1.0.0.beta
 Bundle-Activator: org.apoa.core.Activator
-Bundle-Vendor: Nikolaus Athanssiadis & Mikolaj Koziarkiewicz
+Bundle-Vendor: Nikolaus Athanassiadis & Mikolaj Koziarkiewicz
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.ui.console;bundle-version="3.5.100",
@@ -12,3 +12,5 @@ Require-Bundle: org.eclipse.ui,
  org.junit
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
+Export-Package: org.apoa.extensions,
+ org.apoa.extensions.util

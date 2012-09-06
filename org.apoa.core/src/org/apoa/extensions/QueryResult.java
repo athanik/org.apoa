@@ -12,6 +12,17 @@ public class QueryResult {
 	private String description;
 
 	private URL url;
+
+	
+	public QueryResult(String name, String description, URL url) {
+		this();
+		this.name = name;
+		this.description = description;
+		this.url = url;
+	}
+
+	public QueryResult() {
+	}
 	
 	public void setName(String name) {
 		this.name = name;
@@ -44,6 +55,11 @@ public class QueryResult {
 	 */
 	public URL getURL() {
 		return url;
+	}
+	
+	@Override
+	public String toString() {
+		return getClass().getSimpleName()+": "+name+"|"+description+"|"+url.toString();
 	}
 
 }
