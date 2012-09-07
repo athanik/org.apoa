@@ -28,6 +28,7 @@
          point="org.apoa.searchConfiguration">
       <configuration
             name="org.apoa.basic.basicConfig"
+            description="Basic DuckDuckGo Search"
             queryExtractor="org.apoa.basic.basicExtractor"
             queryProcessor="org.apoa.basic.duckDuckGoProcessor"
             resultView="org.apoa.basic.rawResultView">

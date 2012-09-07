@@ -71,7 +71,7 @@ public class APOAConfig {
 		return resultViews.get(id);
 	}
 	
-	protected Map<String, Configuration> getConfigs() {
+	public Map<String, Configuration> getConfigs() {
 		return configs;
 	}
 	
